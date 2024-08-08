@@ -2,7 +2,33 @@
 title: "r-data-exploration"
 format: html
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
+
+```{r}
+
+library(skimr)
+library(GGally)
+library(tidyverse)
+
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+
+ggpairs(diamonds)
+
+ggplot(data=diamonds, aes(x=carat, y=price, color=carat)) + geom_point()
+
+ggplot(data=diamonds, aes(x=carat)) + geom_histogram()
+
+ggplot(data=diamonds, aes(x=clarity, y=price)) + geom_boxplot()
+
+
+```
 
 
